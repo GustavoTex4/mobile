@@ -1,13 +1,15 @@
 import React from 'react'
-import { Avatar, Button, Card, Text } from 'react-native-paper'
+import { Button } from 'react-native'
+import { Avatar, Card, Text } from 'react-native-paper'
 
 
 
-const Pagina2 = () => {
+const Pagina2 = ({navigation}) => {
     const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
     return (
         <>
-
+             <Button title='Pagina 1' onPress={() => navigation.navigate('pagina1')} />
+                <Button title='Pagina 3' onPress={() => navigation.navigate('pagina3')} />
             <Card style={{ marginBotton: 20 }}>
                 <Card.Content>
                     <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
